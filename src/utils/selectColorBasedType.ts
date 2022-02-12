@@ -19,7 +19,7 @@ export function selectColorBasedType(type: string) {
     poison: 'green-400',
     ground: 'green-400',
     bug: 'green-400',
-    electric: 'green-400',
+    electric: 'yellow-400',
     dragon: 'green-400',
   }
 
