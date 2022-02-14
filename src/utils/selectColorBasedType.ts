@@ -12,18 +12,16 @@ export function selectColorBasedType(type: string) {
     psychic: 'pink-400',
     ice: 'blue-300',
     dark: 'orange-700',
-    fairy: 'green-400',
-    normal: 'green-400',
-    fighting: 'green-400',
-    flying: 'green-400',
-    poison: 'green-400',
-    ground: 'green-400',
-    bug: 'green-400',
+    fairy: 'purple-400',
+    normal: 'purple-400',
+    fighting: 'purple-400',
+    flying: 'purple-400',
+    poison: 'purple-400',
+    ground: 'purple-400',
+    bug: 'green-700',
     electric: 'yellow-400',
-    dragon: 'green-400',
+    dragon: 'purple-400',
   }
-
-  console.log(color[type])
 
   return color[type];
 }

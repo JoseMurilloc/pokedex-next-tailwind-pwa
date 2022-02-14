@@ -1,21 +1,34 @@
 import Image from 'next/image';
 import { Component } from 'react'
-import {  ItemPokemonResponse, ResponsePokemon } from '../@types/home';
+import { useQuery } from 'react-query';
+import { ResponsePokemon } from '../@types/home';
 
 import { CardPokemon } from '../components/cardPokemon';
 import { Search } from '../components/search';
 import { Sort } from '../components/sort';
+import { UseQuery } from '../lib/useQuery';
 import { api } from '../services/api';
 
 type HomeProps = {};
 type HomeState = {
   pokemons: Array<any>;
+  queryState: {
+    isLoading: boolean;
+    error: boolean;
+    data: any;
+  }
 };
 
 export default class Home extends Component<HomeProps, HomeState> { 
   state: HomeState = {
-    pokemons: []
+    pokemons: [],
+    queryState: {
+      isLoading: false,
+      error: false,
+      data: {}
+    }
   };
+
   
   componentDidMount() {
     this.handleFetchingAllPokemon();
@@ -29,6 +42,9 @@ export default class Home extends Component<HomeProps, HomeState> {
       console.log('error')
     }
   }
+
+ 
+
 
 
   render () {
